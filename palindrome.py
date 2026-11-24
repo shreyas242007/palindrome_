@@ -1,0 +1,19 @@
+def is_palindrome(s):
+   
+    cleaned_s = "".join(s.split()).lower()
+    return cleaned_s == cleaned_s[::-1]
+
+
+if __name__ == "__main__":
+    test_strings = [
+        "madam",
+        "racecar",
+        "hello",
+        "A man a plan a canal Panama",
+    ]
+    print("--- Palindrome Checker ---")
+    for test_str in test_strings:
+        if is_palindrome(test_str):
+            print(f'"{test_str}" is a palindrome')
+        else:
+            print(f'"{test_str}" is not a palindrome')
